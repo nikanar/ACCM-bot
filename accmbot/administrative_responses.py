@@ -19,6 +19,8 @@ class Autoanswerer(AccmHandler):
 
         msg = "" # FIXME get this from the FasttextHandler, or parse the conversation above.
         response = "\n\n".join(self.precanned_answers)
+        response = "\n".join([" ".join(a.split()[:8])+" ... "+" ".join(a.split()[-3:])
+                              for a in self.precanned_answers])
         # FIXME pick the correct answer to the msg instead of sending them all
         
         print("bot selects {} from the list of preformatted answers"
