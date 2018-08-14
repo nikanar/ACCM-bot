@@ -10,8 +10,9 @@ LISTEN_CHANNELS = ["CC68GD2QG", "CC82B8Z6K"]
 
 def main():
     token = TOKEN or os.environ.get('SLACK_BOT_TOKEN')
-    keyword_handler = KeywordHandler(JsonKeywordData("./test.json"), "CC68GD2QG")
     helpdesk_handler = HelpdeshHandler("CC68GD2QG", "CC73Z93E1")
+    keyword_handler = KeywordHandler(JsonKeywordData("./test.json"), "CC68GD2QG")
+    # FIXME FasttextHandler ?
 
     accm_bot = AccmBot(token, keyword_handler, helpdesk_handler)
     accm_bot.add_channels(*LISTEN_CHANNELS)
