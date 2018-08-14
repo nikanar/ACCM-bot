@@ -4,6 +4,7 @@ from accmbot import AccmHandler
 
 
 class JsonKeywordData:
+    "FIXME This wheel has been invented before."
     def __init__(self, filename):
         self.items = list()
         with open(filename, 'r') as file:

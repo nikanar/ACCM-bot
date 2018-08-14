@@ -33,8 +33,8 @@ class FasttextHandler(AccmHandler):
 
 
     def get_label(self, msg):
-        fasttext_cmd = "/Users/jp/Desktop/fastText-0.1.0/fasttext"
-        model_file = "/Users/jp/Desktop/fastText-0.1.0/model.bin"
+        fasttext_cmd = "/home/will/queer/fastText-0.1.0/fasttext"
+        model_file = "fasttext_model.bin"
         with open('tmp', 'w') as tmp:
             tmp.write(msg)
             tmp.write('\n')

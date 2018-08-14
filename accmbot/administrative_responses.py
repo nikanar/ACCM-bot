@@ -14,7 +14,7 @@ class Autoanswerer(AccmHandler):
         if not BOT_TRIGGER in message: return
         msg = "FIXME" # get this from the FasttextHandler, or parse the conversation above.
 
-        json_data = json.load(open("text.json"))
+        json_data = json.load(open("administration.json"))
         precanned_answers = [e['response'] for e in json_data if "test" not in e['response']]
         response = "\n\n".join(precanned_answers)
         # FIXME pick the correct answer to the msg instead of sending them all
