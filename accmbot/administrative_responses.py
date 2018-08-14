@@ -14,14 +14,10 @@ class Autoanswerer(AccmHandler):
 
     def handle_message(self, slack_client, event):
         """Move the 'This is an administrative query, we have a precanned answer to it.' ball forward with the correct answer."""
-
-        print("answerer filters: {}".format(event))
-        
         if event["channel"] != self.listen_channel: return
         if not self.BOT_TRIGGER in event["text"]: return
 
-        msg = "FIXME" # get this from the FasttextHandler, or parse the conversation above.
-        print("answerer sees: {}".format(event))
+        msg = "" # FIXME get this from the FasttextHandler, or parse the conversation above.
         response = "\n\n".join(self.precanned_answers)
         # FIXME pick the correct answer to the msg instead of sending them all
         
