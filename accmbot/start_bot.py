@@ -13,8 +13,9 @@ def main():
     helpdesk_handler = HelpdeshHandler("CC68GD2QG", "CC73Z93E1")
     keyword_handler = KeywordHandler(JsonKeywordData("./test.json"), "CC68GD2QG")
     fasttext_handler = FasttextHandler("CC68GD2QG", "CC73Z93E1")
+    autoanswer_handler = Autoanswerer("CC68GD2QG", "CC73Z93E1")
 
-    accm_bot = AccmBot(token, keyword_handler, helpdesk_handler, fasttext_handler)
+    accm_bot = AccmBot(token, keyword_handler, helpdesk_handler, fasttext_handler, )
     accm_bot.add_channels(*LISTEN_CHANNELS)
     accm_bot.connect()
     accm_bot.start()
