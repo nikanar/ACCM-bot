@@ -7,13 +7,14 @@ class FasttextHandler(AccmHandler):
     def __init__(self, listen_channel):
         self.listen_channel = listen_channel
         self.response_channel = listen_channel
+        self.BOT_TRIGGER = "bot"
 
+        
     def handle_message(self, slack_client, event):
         if event["channel"] != self.listen_channel: return
         message = event["text"].strip()
-        BOT_TRIGGER = "bot"
-        if not message.startswith(BOT_TRIGGER): return
-        msg = message[len(BOT_TRIGGER):].strip()
+        if not message.startswith(self.BOT_TRIGGER): return
+        msg = message[len(self.BOT_TRIGGER):].strip()
         
         label = self.get_label(msg)
         prettyfy = {b"__label__u" : "This is [URGENT] !!",
@@ -21,8 +22,6 @@ class FasttextHandler(AccmHandler):
                     b"__label__a" : "This is an administrative query, we have a precanned answer to it.",
                     b"__label__r" : "Ignore this message."
                     }
-        # TODO Spell the administrative options out to the user somehow
-        # they currently live in test.json.
         try:
             response = prettyfy[label]
         except KeyError:
