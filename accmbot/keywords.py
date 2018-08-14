@@ -21,7 +21,7 @@ class KeywordHandler(AccmHandler):
         self.channel = channel
 
     def handle_message(self, slack_client, event):
-        if event["channel"] == self.channel and if "subtype" not in event:
+        if event["channel"] == self.channel and "subtype" not in event:
             response = list()
             message = event["text"]
             for keywords_item in self.keywords_data.items:
