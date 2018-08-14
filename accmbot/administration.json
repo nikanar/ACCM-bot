@@ -1,0 +1,42 @@
+[
+  {
+    "keywords": ["0/5", "1/5", "2/5"],
+    "response": "We're sorry to hear our answer wasn't helpful. Did we misunderstand your question? Were you hoping for other info?"
+  },
+  {
+    "keywords": ["3/5", "4/5"],
+    "response": "this is a test response"
+  },
+  {
+    "keywords": ["5/5"],
+    "response": "this is a test response"
+  },
+  {
+    "keywords": ["send nudes", "send pics"],
+    "response": "Hey! SextEd is not a sexting line, but we're happy to answer any questions you have about sexual health, finding sexting partners, or safer sexting!"
+  },
+  {
+    "keywords": ["bonjour", "salut", "j'ai", "j'avais"],
+    "response": "Tu as joint SextEd, le service texto anglophone confidentiel de santé sexuelle. Pour obtenir une réponse en français, envoie un texto à Sext’Info à 514-400-9301"
+  },
+  {
+    "keywords": ["keyword1", "keyword2"],
+    "response": "this is another test response"
+  },
+  {
+    "keywords": ["urgent"],
+    "response": "Hi again! We’ll try to answer your question within 24 hours. Sadly, we aren’t set up to live chat or answer right away. For an immediate answer, you can dial 811 to talk to a nurse at Info-Santé. You can also search for your answer on https://sexted.org!"
+  },
+  {
+    "keywords": ["image"],
+    "response": "Hey! We see that you tried to send us an image. We're not set up to see them, but we're happy to answer any questions you have about sex or dating!"
+  },
+  {
+    "keywords": ["send me pictures of"],
+    "response": "Hey! SextEd is not a sexting line, but we're happy to answer any questions you have about sexual health, finding sexting partners, or safer sexting!"
+  },
+  {
+    "keywords": ["first message"],
+    "response": "Hi! You've reached SextEd, Montreal's confidential helpline for questions on sexual health and relationships. We'll answer any questions within 24 hours!\nFor more on the service and how your information is protected: http://sexted.org/terms-conditions/"
+  }
+]

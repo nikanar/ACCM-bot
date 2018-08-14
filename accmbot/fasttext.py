@@ -4,9 +4,9 @@ from accmbot import AccmHandler
 
 
 class FasttextHandler(AccmHandler):
-    def __init__(self, listen_channel, response_channel):
+    def __init__(self, listen_channel):
         self.listen_channel = listen_channel
-        self.response_channel = response_channel
+        self.response_channel = listen_channel
 
     def handle_message(self, slack_client, event):
         if event["channel"] != self.listen_channel: return

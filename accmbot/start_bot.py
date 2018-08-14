@@ -14,10 +14,10 @@ def main():
     token = TOKEN or os.environ.get('SLACK_BOT_TOKEN')
     helpdesk_handler = HelpdeshHandler("CC68GD2QG", "CC73Z93E1")
     keyword_handler = KeywordHandler(JsonKeywordData("./administration.json"), "CC68GD2QG")
-    fasttext_handler = FasttextHandler("CC68GD2QG", "CC73Z93E1")
-    autoanswer_handler = Autoanswerer("CC68GD2QG", "CC73Z93E1")
+    fasttext_handler = FasttextHandler("CC68GD2QG")
+    autoanswer_handler = Autoanswerer("CC68GD2QG")
 
-    accm_bot = AccmBot(token, keyword_handler, helpdesk_handler, fasttext_handler, )
+    accm_bot = AccmBot(token, keyword_handler, helpdesk_handler, fasttext_handler, autoanswer_handler)
     accm_bot.add_channels(*LISTEN_CHANNELS)
     accm_bot.connect()
     accm_bot.start()
