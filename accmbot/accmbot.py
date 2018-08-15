@@ -24,7 +24,7 @@ class AccmBot:
         self.handlers = tuple(handlers)
 
     def connect(self):
-        self.slack_client.rtm_connect(with_team_state=False)
+        self.slack_client.rtm_connect(with_team_state=False, auto_reconnect=True)
         response = self.slack_client.api_call("auth.test")
         if "user_id" in response:
             self.bot_id = response["user_id"]
