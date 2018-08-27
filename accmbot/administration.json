@@ -4,24 +4,12 @@
     "response": "We're sorry to hear our answer wasn't helpful. Did we misunderstand your question? Were you hoping for other info?"
   },
   {
-    "keywords": ["3/5", "4/5"],
-    "response": "this is a test response"
-  },
-  {
-    "keywords": ["5/5"],
-    "response": "this is a test response"
-  },
-  {
     "keywords": ["send nudes", "send pics"],
     "response": "Hey! SextEd is not a sexting line, but we're happy to answer any questions you have about sexual health, finding sexting partners, or safer sexting!"
   },
   {
       "keywords": ["bonjour", "salut", "j'ai", "j'avais", "je "],
     "response": "Tu as joint SextEd, le service texto anglophone confidentiel de santé sexuelle. Pour obtenir une réponse en français, envoie un texto à Sext’Info à 514-400-9301"
-  },
-  {
-    "keywords": ["keyword1", "keyword2"],
-    "response": "this is another test response"
   },
   {
       "keywords": ["urgent", "plan b", "morning after pill", "emergency contraception", "emergency", "pep"],
