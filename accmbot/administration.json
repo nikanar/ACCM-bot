@@ -20,7 +20,7 @@
     "response": "Hey! We see that you tried to send us an image. We're not set up to see them, but we're happy to answer any questions you have about sex or dating!"
   },
   {
-    "keywords": ["send me pictures of"],
+      "keywords": ["send me pictures of"],
     "response": "Hey! SextEd is not a sexting line, but we're happy to answer any questions you have about sexual health, finding sexting partners, or safer sexting!"
   },
   {

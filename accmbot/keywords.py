@@ -4,7 +4,8 @@ from accmbot import AccmHandler
 
 class JsonKeywordData:
     def __init__(self, filename):
-        self.items = [(p['keywords'], p['response']) for p in json.load(open(filename))]
+        self.items = [([k.lower() for k in p['keywords']], p['response'])
+                      for p in json.load(open(filename))]
 
 class KeywordHandler(AccmHandler):
     def __init__(self, keywords_data, channel):
@@ -13,12 +14,18 @@ class KeywordHandler(AccmHandler):
 
     def handle_message(self, slack_client, event):
         if event["channel"] == self.channel and "subtype" not in event:
-            response = list()
+            response = []
             message = event["text"]
+                
             for keywords_item in self.keywords_data.items:
                 response.extend(self.find_keywords(message.lower(), keywords_item))
 
-            if len(response) > 0:
+            if 'files' in event:
+                for f in event['files']:
+                    if f['mimetype'] == 'image/jpeg':
+                        response.extend(self.find_keywords("<image-is-being-sent>", keywords_item))
+                
+            if response:
                 self.send_response(slack_client, response)
 
     def find_keywords(self, message, keywords_item):
