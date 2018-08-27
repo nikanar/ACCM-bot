@@ -23,7 +23,7 @@ class KeywordHandler(AccmHandler):
             if 'files' in event:
                 for f in event['files']:
                     if f['mimetype'] == 'image/jpeg':
-                        response.extend(self.find_keywords("<image-is-being-sent>", keywords_item))
+                        response.extend(["Hey! We see that you tried to send us an image. We're not set up to see them, but we're happy to answer any questions you have about sex or dating!"])
                 
             if response:
                 self.send_response(slack_client, response)
