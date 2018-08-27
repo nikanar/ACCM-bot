@@ -2,18 +2,9 @@ import json
 
 from accmbot import AccmHandler
 
-
 class JsonKeywordData:
-    "FIXME This wheel has been invented before."
     def __init__(self, filename):
-        self.items = list()
-        with open(filename, 'r') as file:
-            data = json.loads(file.read())
-            for item in data:
-                keywords = item['keywords']
-                response = item['response']
-                self.items.append((keywords, response))
-
+        self.items = [(p['keywords'], p['response']) for p in json.load(filename)]
 
 class KeywordHandler(AccmHandler):
     def __init__(self, keywords_data, channel):
