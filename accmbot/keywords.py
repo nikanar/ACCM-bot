@@ -4,7 +4,7 @@ from accmbot import AccmHandler
 
 class JsonKeywordData:
     def __init__(self, filename):
-        self.items = [(p['keywords'], p['response']) for p in json.load(filename)]
+        self.items = [(p['keywords'], p['response']) for p in json.load(open(filename))]
 
 class KeywordHandler(AccmHandler):
     def __init__(self, keywords_data, channel):
