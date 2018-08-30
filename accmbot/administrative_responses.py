@@ -8,7 +8,7 @@ class Autoanswerer(AccmHandler):
         self.response_channel = listen_channel
         self.TRIGGERS = ['bit.ly', 'sexted.org/?p=', 'sexted.org?p=']
         self.ANSWER = """How helpful was our answer? Text us a rating from 1-5, 1/5 being not helpful and 5/5 being very helpful. Thanks!
-It would also help us a lot if you could answer this anonymous 6-question survey! https://goo.gl/forms/wtF5lNHDFssPAyVi1"""
+It would also help us a lot if you could answer this anonymous 4-question survey! https://goo.gl/forms/mMMr3juQHGXmNnaR2"""        
         
         self.OTHER_TRIGGER = "This is an administrative query"
         json_kb = json.load(open("administration.json"))
